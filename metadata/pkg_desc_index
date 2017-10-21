@@ -1,0 +1,6 @@
+dev-util/smartgit 17.0.5: Git client with support for GitHub Pull Requests+Comments, SVN and Mercurial
+media-gfx/alembic 1.7.4: Alembic is an open framework for storing and sharing scene data
+media-gfx/blender 9999: 3D Creation/Animation/Publishing System
+media-libs/pyilmbase 2.2.0: Python bindings for the media-libs/ilmbase package
+media-sound/denemo 2.2.0: A music notation editor
+sci-misc/cdfplayer 11.1.1: Wolfram Player for the interactive Computable Document Format (CDF)
