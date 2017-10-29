@@ -1,4 +1,6 @@
+dev-util/elkhound 9999: Elkhound is a GLR parser generator
 dev-util/smartgit 17.1.0: Git client with support for GitHub Pull Requests+Comments, SVN and Mercurial
+games-util/weidu 9999: Develop, distribute and install mods for Infinity Engine games.
 media-gfx/alembic 1.7.4: Alembic is an open framework for storing and sharing scene data
 media-gfx/blender 9999: 3D Creation/Animation/Publishing System
 media-libs/pyilmbase 2.2.0: Python bindings for the media-libs/ilmbase package
