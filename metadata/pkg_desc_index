@@ -1,3 +1,4 @@
+dev-go/modmerge 1.1: Tool which merges mod zip files back into Infinity Engine games.
 dev-util/elkhound 9999: Elkhound is a GLR parser generator
 dev-util/smartgit 17.1.0: Git client with support for GitHub Pull Requests+Comments, SVN and Mercurial
 games-util/weidu 9999: Develop, distribute and install mods for Infinity Engine games.
