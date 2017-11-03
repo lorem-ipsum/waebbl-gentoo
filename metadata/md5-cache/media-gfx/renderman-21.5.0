@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst unpack
+DEPEND=>=app-arch/rpm2targz-9.0.0.3g
+DESCRIPTION=Renderman render engine
+EAPI=6
+HOMEPAGE=https://renderman.pixar.com/
+KEYWORDS=~amd64
+LICENSE=RenderMan-TMPL
+RDEPEND=dev-libs/glib x11-libs/libXext x11-libs/libX11 virtual/opengl sys-libs/zlib x11-libs/libXi x11-libs/libSM x11-libs/libICE sys-apps/dbus x11-libs/libxcb media-libs/fontconfig media-libs/freetype x11-libs/libXrender dev-libs/libffi dev-libs/libpcre sys-apps/util-linux dev-libs/libbsd sys-apps/systemd x11-libs/libXau x11-libs/libXdmcp dev-libs/expat app-arch/bzip2 media-libs/libpng:0 media-libs/harfbuzz sys-libs/libcap app-arch/xz-utils app-arch/lz4 dev-libs/libgcrypt:0 media-gfx/graphite2 sys-apps/attr dev-libs/libgpg-error
+RESTRICT=bindist mirror fetch strip
+SLOT=0
+SRC_URI=RenderMan-InstallerNCR-21.5.0_1768966-linuxRHEL6_gcc44icc150.x86_64.rpm
+_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	227b041a120d309fdefbebb3b8c1dfa9	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	rpm	f52cfa3a435468d86d3b49c357b9cb35	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=cb5985f510b4c3dd953d03ff0ea197e7
