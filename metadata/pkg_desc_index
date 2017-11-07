@@ -10,4 +10,4 @@ media-gfx/renderman 21.5.0: Renderman render engine
 media-gfx/renderman-for-blender 21.5.0: RenderMan addon for blender
 media-libs/pyilmbase 2.2.0: Python bindings for the media-libs/ilmbase package
 media-sound/denemo 2.2.0: A music notation editor
-sci-misc/cdfplayer 11.1.1: Wolfram Player for the interactive Computable Document Format (CDF)
+sci-misc/cdfplayer 11.1.1 11.2.0: Wolfram Player for the interactive Computable Document Format (CDF)
