@@ -3,6 +3,7 @@
 # * generated automatically using pmaint *
 
 dev-libs/qtnproperty:demo - Build and install the demo program.
+games-util/simulationcraft:gui - Builds the Qt5 GUI
 media-gfx/alembic:boost - Use dev-libs/boost library
 media-gfx/alembic:hdf5 - Add support sci-libs/hdf5
 media-gfx/alembic:pyalembic - Build pyalembic python bindings (needs media-libs/pyilmbase)
