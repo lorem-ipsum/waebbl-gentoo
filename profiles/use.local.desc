@@ -3,10 +3,11 @@
 # * generated automatically using pmaint *
 
 dev-libs/qtnproperty:demo - Build and install the demo program.
+dev-python/pyilmbase:numpy - Add bindings for dev-python/numpy use.
 games-util/simulationcraft:gui - Builds the Qt5 GUI
 media-gfx/alembic:boost - Use dev-libs/boost library
 media-gfx/alembic:hdf5 - Add support sci-libs/hdf5
-media-gfx/alembic:pyalembic - Build pyalembic python bindings (needs media-libs/pyilmbase)
+media-gfx/alembic:pyalembic - Build pyalembic python bindings (needs dev-python/pyilmbase)
 media-gfx/alembic:test - Build and run the test-suite
 media-gfx/alembic:zlib - Use sys-libs/zlib for compressions
 media-gfx/blender:alembic - Add support for media-gfx/alembic to store scene data
@@ -33,7 +34,6 @@ media-gfx/blender:osl - Add support for OpenShadingLanguage scripting.
 media-gfx/blender:player - Build the Blender Player. THis requires the Game engine.
 media-gfx/blender:test - Build the provided unit tests.
 media-gfx/blender:valgrind - Add support for memory debugging using dev-util/valgrind
-media-libs/pyilmbase:numpy - Add bindings for dev-python/numpy use.
 media-sound/denemo:alsa - Enable alsa support through media-libs/alsa-lib
 media-sound/denemo:aubio - Enable media-libs/aubio support
 media-sound/denemo:doc - Use dev-util/gtk-doc to build documentation in html format
