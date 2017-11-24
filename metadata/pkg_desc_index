@@ -3,12 +3,24 @@ dev-libs/qtnproperty 1.0.1 9999: Tool to extend properties in the Qt5 framework.
 dev-python/pyilmbase 2.2.0: Python bindings for the media-libs/ilmbase package
 dev-util/elkhound 9999: Elkhound is a GLR parser generator
 dev-util/smartgit 17.1.2: Git client with support for GitHub Pull Requests+Comments, SVN and Mercurial
+games-rpg/nwmouse 20090906.183839: Hardware mouse cursors for Neverwinter Nights
+games-rpg/nwmovies 20090223.080954: Play Neverwinter Nights movies inside the Linux client
+games-rpg/nwn 1.68-r6 1.69-r1: role-playing game set in a huge medieval fantasy world of Dungeons and Dragons
+games-rpg/nwn-cep 1.68-r1 2.0: High quality custom content addon for Neverwinter Nights
+games-rpg/nwn-data 1.29-r5: Neverwinter Nights Data Files
+games-rpg/nwn-penultima 1-r1: A parodic fantasy module for Neverwinter Nights
+games-rpg/nwn-penultimarerolled 1: A parodic fantasy module for Neverwinter Nights
+games-rpg/nwn-shadowlordsdreamcatcherdemon 1: The bundled Shadowlords, Dreamcatcher, and Demon campaigns by Hall-of-Famer Adam Miller
 games-util/simulationcraft 730-r2 9999: SimulationCraft is a tool to explore combat mechanics in World of Warcraft.
 games-util/weidu 9999: Develop, distribute and install mods for Infinity Engine games.
 media-gfx/alembic 1.7.4: Alembic is an open framework for storing and sharing scene data
 media-gfx/awesomebump 5.0: Tool to generate different types of textures from a single image.
-media-gfx/blender 9999: 3D Creation/Animation/Publishing System
+media-gfx/blender 2.79 9999: 3D Creation/Animation/Publishing System
 media-gfx/renderman 21.5.0: Renderman render engine
 media-gfx/renderman-for-blender 21.5.0: RenderMan addon for blender
+media-libs/SeExpr 2.11: An embeddable expression evaluation engine
+media-libs/openimageio 1.8.6: A library for reading and writing images
+media-libs/osl 1.8.12: Advanced shading language for production GI renderers
+media-libs/partio 1.1.0_p20170829: A library for particle IO and manipulation
 media-sound/denemo 2.2.0: A music notation editor
 sci-misc/cdfplayer 11.1.1 11.2.0: Wolfram Player for the interactive Computable Document Format (CDF)

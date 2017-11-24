@@ -4,6 +4,11 @@
 
 dev-libs/qtnproperty:demo - Build and install the demo program.
 dev-python/pyilmbase:numpy - Add bindings for dev-python/numpy use.
+games-rpg/nwn:hou - Install the Hordes of the Underdark expansion pack
+games-rpg/nwn:sou - Installs the Shadows of Undrentide expension pack
+games-rpg/nwn-data:hou - Install the Hordes of the Underdark expansion pack
+games-rpg/nwn-data:nowin - For those people who cant grab the 1.2 gigs of data files from a windows partition
+games-rpg/nwn-data:sou - Installs the Shadows of Undrentide expension pack
 games-util/simulationcraft:gui - Builds the Qt5 GUI
 media-gfx/alembic:boost - Use dev-libs/boost library
 media-gfx/alembic:hdf5 - Add support sci-libs/hdf5
@@ -34,6 +39,15 @@ media-gfx/blender:osl - Add support for OpenShadingLanguage scripting.
 media-gfx/blender:player - Build the Blender Player. THis requires the Game engine.
 media-gfx/blender:test - Build the provided unit tests.
 media-gfx/blender:valgrind - Add support for memory debugging using dev-util/valgrind
+media-libs/openimageio:colorio - Use media-libs/opencolorio
+media-libs/openimageio:cpu_flags_x86_avx512f - SIMD Optimization
+media-libs/openimageio:cpu_flags_x86_f16c - SIMD Optimization
+media-libs/openimageio:dicom - Use sci-libs/dcmtk to provide dicom image support
+media-libs/openimageio:field3d - Use media-libs/Field3D
+media-libs/openimageio:opencv - Use media-libs/opencv
+media-libs/openimageio:ptex - Use media-libs/ptex
+media-libs/osl:partio - Use media-libs/partio
+media-libs/partio:seexpr - Use media-libs/SeExpr expression language
 media-sound/denemo:alsa - Enable alsa support through media-libs/alsa-lib
 media-sound/denemo:aubio - Enable media-libs/aubio support
 media-sound/denemo:coverage - Enable coverage testing of the code
