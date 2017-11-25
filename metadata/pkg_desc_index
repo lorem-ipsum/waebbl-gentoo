@@ -1,5 +1,6 @@
 dev-go/modmerge 1.1: Tool which merges mod zip files back into Infinity Engine games.
 dev-libs/qtnproperty 1.0.1 9999: Tool to extend properties in the Qt5 framework.
+dev-libs/tvision 2.2.1-r4: Text User Interface that implements the well known CUA widgets
 dev-python/pyilmbase 2.2.0: Python bindings for the media-libs/ilmbase package
 dev-util/elkhound 9999: Elkhound is a GLR parser generator
 dev-util/smartgit 17.1.2: Git client with support for GitHub Pull Requests+Comments, SVN and Mercurial
