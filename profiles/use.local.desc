@@ -4,11 +4,6 @@
 
 dev-libs/qtnproperty:demo - Build and install the demo program.
 dev-python/pyilmbase:numpy - Add bindings for dev-python/numpy use.
-games-rpg/nwn:hou - Install the Hordes of the Underdark expansion pack
-games-rpg/nwn:sou - Installs the Shadows of Undrentide expension pack
-games-rpg/nwn-data:hou - Install the Hordes of the Underdark expansion pack
-games-rpg/nwn-data:nowin - For those people who cant grab the 1.2 gigs of data files from a windows partition
-games-rpg/nwn-data:sou - Installs the Shadows of Undrentide expension pack
 games-util/simulationcraft:gui - Builds the Qt5 GUI
 media-gfx/alembic:boost - Use dev-libs/boost library
 media-gfx/alembic:hdf5 - Add support sci-libs/hdf5
