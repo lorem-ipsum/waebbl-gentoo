@@ -7,5 +7,5 @@ LICENSE=MIT
 RDEPEND=>=media-gfx/blender-2.78 =media-gfx/renderman-21.5.0
 SLOT=0
 SRC_URI=https://github.com/prman-pixar/RenderManForBlender/archive/v21_5_0.tar.gz -> renderman-for-blender-21.5.0.tar.gz
-_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	vcs-snapshot	3be1ab44131e8c0bbdaa75823008444b	versionator	ce21313503c41896ebcd7d58b0607e37
+_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	vcs-snapshot	3be1ab44131e8c0bbdaa75823008444b	versionator	26ca8a8bd95d6a74122c08ba98a4ee72
 _md5_=359b869b1686e2f9e33a1a93f381ee58
