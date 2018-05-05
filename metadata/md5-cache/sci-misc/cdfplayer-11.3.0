@@ -1,4 +1,4 @@
-DEFINED_PHASES=install postinst postrm unpack
+DEFINED_PHASES=install nofetch postinst postrm unpack
 DESCRIPTION=Wolfram Player for the interactive Computable Document Format (CDF)
 EAPI=6
 HOMEPAGE=http://www.wolfram.com/cdf-player/
