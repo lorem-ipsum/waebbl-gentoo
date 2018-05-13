@@ -10,4 +10,4 @@ RDEPEND=gui? ( dev-qt/qtchooser )
 SLOT=0
 SRC_URI=https://github.com/simulationcraft/simc/archive/release-730-02.tar.gz -> simulationcraft-730-02.tar.gz
 _eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	vcs-snapshot	3be1ab44131e8c0bbdaa75823008444b	versionator	26ca8a8bd95d6a74122c08ba98a4ee72
-_md5_=e3f3373c41a914a698f231f5041334a5
+_md5_=f9e304bd4890032b144482d4b5bb291f

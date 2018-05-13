@@ -10,4 +10,4 @@ RDEPEND=guile2? ( >=dev-scheme/guile-2:12 >=media-sound/lilypond-2.19.54[guile2=
 SLOT=0
 SRC_URI=mirror://gnu/denemo/denemo-2.2.0.tar.gz
 _eclasses_=xdg-utils	f2c8335407f0b935b0a96d4adf23ef25
-_md5_=12ef31c8198a06c63f90e6d9449bfc34
+_md5_=f97ea3421861e98e4f3f900353f52733
