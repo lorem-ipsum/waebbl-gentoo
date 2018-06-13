@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst unpack
-DEPEND=gui? ( dev-qt/qtchooser ) dev-libs/openssl gui? ( dev-qt/qtwebkit:5 ) >=dev-vcs/git-1.8.2.1
+DEPEND=gui? ( dev-qt/qtchooser ) dev-libs/openssl gui? ( dev-qt/qtwebkit:5 ) >=dev-vcs/git-1.8.2.1[curl]
 DESCRIPTION=SimulationCraft is a tool to explore combat mechanics in World of Warcraft.
 EAPI=6
 HOMEPAGE=http://simulationcraft.org/
@@ -7,5 +7,5 @@ IUSE=+gui
 LICENSE=GPL-3
 RDEPEND=gui? ( dev-qt/qtchooser )
 SLOT=0
-_eclasses_=git-r3	af51ccfceeb403ab80f1bf9209d372c8
+_eclasses_=git-r3	8f6de46b0aa318aea0e8cac62ece098b
 _md5_=abc4fbe39dbb5f3cd59806fbe98e061b
