@@ -6,5 +6,5 @@ KEYWORDS=~amd64
 LICENSE=GPL-3
 SLOT=0
 SRC_URI=https://github.com/kmkolasinski/AwesomeBump/archive/Linuxv5.0.tar.gz -> awesomebump-5.0.tar.gz
-_eclasses_=vcs-snapshot	3be1ab44131e8c0bbdaa75823008444b
+_eclasses_=vcs-snapshot	b77011b62e2053c646ad720defe6d921
 _md5_=27caae977c8b450702190ed29555b465
