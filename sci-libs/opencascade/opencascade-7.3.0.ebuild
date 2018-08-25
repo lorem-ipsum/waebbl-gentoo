@@ -7,7 +7,7 @@ inherit cmake-utils eutils check-reqs multilib java-pkg-opt-2 flag-o-matic versi
 
 DESCRIPTION="Development platform for CAD/CAE, 3D surface/solid modeling and data exchange"
 HOMEPAGE="http://www.opencascade.com/"
-# convert x.x.x to x_x_x
+
 MY_PV="$(replace_all_version_separators '_')"
 SRC_URI="https://git.dev.opencascade.org/gitweb/?p=occt.git;a=snapshot;h=refs/tags/V${MY_PV};sf=tgz -> ${P}.tar.gz"
 
@@ -50,6 +50,7 @@ PATCHES=(
 	"${FILESDIR}"/ffmpeg4.patch
 	"${FILESDIR}"/fix-install-dir-references.patch
 	"${FILESDIR}"/vtk7.patch
+	"${FILESDIR}"/opencascade-fix-install-dir-reference.patch
 	)
 
 pkg_setup() {
@@ -60,7 +61,7 @@ pkg_setup() {
 src_prepare() {
 	cmake-utils_src_prepare
 	use java && java-pkg-opt-2_src_prepare
-	local my_install_dir=${EROOT}usr/$(get_libdir)/${P}/ros
+	my_install_dir=${EROOT}usr/$(get_libdir)/${P}/ros
 	local my_env_install="#!/bin/sh -f
 if [ -z \"\$PATH\" ]; then
 	export PATH=VAR_CASROOT/Linux/bin
