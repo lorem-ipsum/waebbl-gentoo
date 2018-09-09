@@ -12,18 +12,17 @@ DESCRIPTION="QT based Computer Aided Design application"
 HOMEPAGE="http://www.freecadweb.org/"
 
 EGIT_REPO_URI="https://github.com/FreeCAD/FreeCAD.git"
+#EGIT_REPO_URI="file:///mnt/data/code/github/freecad/"
 EGIT_BRANCH="master"
 #EGIT_COMMIT="0258808"
-#EGIT_REPO_URI="file:///mnt/data/code/github/freecad/"
-#EGIT_BRANCH="master"
 
 LICENSE="GPL-2"
 SLOT="0"
 
 # TODO:
-#   vr: needs a rift package
-#	pcl: sci-libs/pcl
-#	netgen: sci-mathematics/netgen
+#   vr: needs a rift package: does this make sense? Currently they don't have
+#		support for linux. The last linux package dates back to 2015!
+#	netgen: sci-mathematics/netgen: doesn't compile -> upstream sci overlay
 #	openscad: media-gfx/openscad
 #	smesh: needs a salome-platform package
 #	zipio++: needs a package
@@ -43,7 +42,7 @@ IUSE_FREECAD_MODULES="
 	+freecad_modules_material
 	+freecad_modules_mesh
 	+freecad_modules_mesh_part
-	+freecad_modules_openscad
+	freecad_modules_openscad
 	+freecad_modules_part
 	+freecad_modules_part_design
 	+freecad_modules_path
@@ -65,7 +64,7 @@ IUSE_FREECAD_MODULES="
 	+freecad_modules_test
 	+freecad_modules_tux
 	+freecad_modules_web"
-IUSE="eigen3 +freetype +qt5 swig ${IUSE_FREECAD_MODULES}"
+IUSE="eigen3 +freetype pcl +qt5 swig ${IUSE_FREECAD_MODULES}"
 
 COMMON_DEPEND="
 	${PYTHON_DEPS}
@@ -86,6 +85,7 @@ COMMON_DEPEND="
 		sys-cluster/openmpi[cxx]
 	)
 	freetype? ( media-libs/freetype )
+	pcl? ( >=sci-libs/pcl-1.8.1[qt5,vtk(+)] )
 	qt5? (
 		dev-libs/libspnav
 		dev-python/pyside:2[concurrent,network,opengl,printsupport,svg,xmlpatterns,webkit,${PYTHON_USEDEP}]
@@ -150,6 +150,7 @@ src_configure() {
 		-DCMAKE_INSTALL_PREFIX=/usr/$(get_libdir)/${PN}
 		-DFREECAD_USE_EXTERNAL_SMESH=0
 		-DFREECAD_USE_EXTERNAL_KDL="ON"
+		-DFREECAD_USE_PCL=$(usex pcl)
 		# opencascade-7.3.0 sets CASROOT in /etc/env.d/51opencascade
 		-DOCC_INCLUDE_DIR=${CASROOT}/include/opencascade
 		-DOCC_LIBRARY_DIR=${CASROOT}/lib
@@ -194,7 +195,7 @@ src_configure() {
 	)
 
 	cmake-utils_src_configure
-	einfo "${P} will be built against opencascade version ${CASROOT}"
+#	einfo "${P} will be built against opencascade version ${CASROOT}"
 }
 
 src_install() {
