@@ -3,17 +3,13 @@
 
 EAPI=6
 
-inherit git-r3
-
 DESCRIPTION="Develop, distribute and install mods for Infinity Engine games."
 HOMEPAGE="https://www.weidu.org https://github.com/WeiDUorg/weidu"
-SRC_URI=""
-EGIT_REPO_URI="https://github.com/WeiDUorg/weidu.git"
-# For now we need the devel branch. Master is not working with >=ocaml-4.02.3
-EGIT_BRANCH="master"
+SRC_URI="https://github.com/WeiDUorg/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="~amd64"
 IUSE="doc"
 
 DEPEND=">=dev-lang/ocaml-4.04.2[ocamlopt]
@@ -25,10 +21,6 @@ RDEPEND=""
 DOCS=( README-WeiDU-Changes.txt )
 HTML_DOCS=( README-WeiDU.html )
 
-src_unpack() {
-	git-r3_src_unpack
-}
-
 src_prepare() {
 	default
 	cp "${S}/sample.Configuration" "${S}/Configuration"
@@ -37,9 +29,7 @@ src_prepare() {
 src_compile() {
 	# fails sometimes when using more than one cores
 	emake -j1 weidu weinstall tolower
-	if use doc; then
-		emake doc
-	fi
+	use doc && emake doc
 }
 
 src_install() {
@@ -49,7 +39,5 @@ src_install() {
 	newexe weidu.asm.exe weidu
 	newexe weinstall.asm.exe weinstall
 
-	if use doc; then
-		einstalldocs
-	fi
+	use doc && einstalldocs
 }
