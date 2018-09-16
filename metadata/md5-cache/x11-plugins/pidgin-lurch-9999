@@ -1,0 +1,10 @@
+DEFINED_PHASES=unpack
+DEPEND=dev-db/sqlite dev-libs/libgcrypt:* dev-libs/libxml2 dev-libs/mxml net-im/pidgin dev-util/cmake >=dev-vcs/git-1.8.2.1[curl]
+DESCRIPTION=XEP-0384: OMEMO Encryption for libpurple
+EAPI=6
+HOMEPAGE=https://github.com/gkdr/lurch
+LICENSE=GPL-3
+RDEPEND=dev-db/sqlite dev-libs/libgcrypt:* dev-libs/libxml2 dev-libs/mxml net-im/pidgin
+SLOT=0
+_eclasses_=git-r3	918d6a744039c29af2cadc7317459765
+_md5_=6e88d8112c2c0920434c8fc7a466aa8c
