@@ -1,9 +1,9 @@
 language:	python
 python:
-    - 2.7
+    - 3.6
 
 install:
-    - wget -O - "https://github.com/gentoo/travis-repo-checks/archive/master.tar.gz" | tar -xz
+    - wget -O - "https://github.com/waebbl/travis-repo-checks/archive/master.tar.gz" | tar -xz
     - bash travis-repo-checks-master/prepare-tests.bash
 
 script:
