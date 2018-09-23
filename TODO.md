@@ -11,6 +11,7 @@
 - [ ] [sci-mathematics/ngsolve](https://github.com/NGSolve/ngsolve) new package: FEM tools tied to sci-libs/netgen
 - [ ] [sci-visualization/knossos](https://github.com/knossos-project/knossos) new package: visualization and annotation of 3D image data.
 - [ ] [app-arch/zipios](https://github.com/Zipios/Zipios) new package: used by freecad, currently internal package is used
+- [ ] [media-gfx/makehuman](https://github.com/makehumancommunity/makehuman) new package: take a look at cg overlay, if their ebuild is usable
 
 ## Packages which need updating
 
@@ -18,10 +19,15 @@
 - [x] media-sound/denemo: improvements with guile-2, no longer support guile-1 in the ebuild, see bugzilla.
 - [ ] improve freecad support by adding the missing dependencies
 - [x] look into weidu compile failure -> added versioned ebuild, issue is restricted to devel branch, see [this issue](https://github.com/WeiDUorg/weidu/issues/127)
-- [ ] dev-python/pyside: need a local ebuild? On [Qt for Python](http://wiki.qt.io/Qt_for_Python/GettingStarted/X11) they say, the same version as Qt is needed. The ebuild from qt overlay uses branch 5.9, but people (including me) might have installed Qt 5.11 already.
+- [ ] dev-python/pyside: need a local ebuild? On [Qt for Python](http://wiki.qt.io/Qt_for_Python/GettingStarted/X11) they say, the same version as Qt is needed. The ebuild from qt overlay uses branch 5.9, but people (including me) might have installed Qt 5.11 already. Also there would be no cross-repo dependency.
+- [ ] OpenEXR Suite: see [PR](https://github.com/gentoo/gentoo/pull/9729) and [Bug](https://bugs.gentoo.org/639998)
 
 ## Less needed packages not in official trees
 - [ ] look through and check whether updates are needed
+- [ ] media-gfx/alembic has 1.7.9
+- [ ] media-gfx/renderman-for-blender might have update to 22
+- [ ] dev-util/smartgit has 18.1
+- [ ] migration from versionator to eapi7-ver for some packages
 
 ## Other things to do
 - [ ] check possibilities for CI of the repo. Possible use cases: automatic merging of all ebuild, automatic merging after update
