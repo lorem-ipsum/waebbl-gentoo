@@ -10,7 +10,7 @@ DESCRIPTION="Alembic is an open framework for storing and sharing scene data"
 HOMEPAGE="http://alembic.io/"
 SRC_URI="https://github.com/${PN}/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="Alembic"
+LICENSE="BSD"
 
 SLOT="0"
 KEYWORDS="~amd64"
@@ -39,7 +39,7 @@ DOCS=( "ACKNOWLEDGEMENTS.txt" "FEEDBACK.txt" "NEWS.txt" "README.txt" )
 
 PATCHES=(
 	"${FILESDIR}/${PN}-FindIlmBase-pkgconfig.patch"
-	"${FILESDIR}/${PN}-1.7.8-CMakeLists-fix_lib.patch"
+	"${FILESDIR}/${P}-CMakeLists-fix_lib.patch"
 	"${FILESDIR}/${P}-prman.patch"
 )
 
