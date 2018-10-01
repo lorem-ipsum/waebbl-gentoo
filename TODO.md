@@ -18,10 +18,10 @@
 - [ ] dev-libs/tvision: comilation problems with newer gcc versions. See bugzilla. Possibly switch to cmake?
 - [x] media-sound/denemo: improvements with guile-2, no longer support guile-1 in the ebuild, see bugzilla.
 - [ ] improve freecad support by adding the missing dependencies
-- [ ] improve and fix opencascade support in sci-mathematics/netgen
+- [x] improve and fix opencascade support in sci-mathematics/netgen
 - [x] look into weidu compile failure -> added versioned ebuild, issue is restricted to devel branch, see [this issue](https://github.com/WeiDUorg/weidu/issues/127)
 - [ ] dev-python/pyside: need a local ebuild? On [Qt for Python](http://wiki.qt.io/Qt_for_Python/GettingStarted/X11) they say, the same version as Qt is needed. The ebuild from qt overlay uses branch 5.9, but people (including me) might have installed Qt 5.11 already. Also there would be no cross-repo dependency.
-- [ ] OpenEXR Suite: see [PR](https://github.com/gentoo/gentoo/pull/9729) and [Bug](https://bugs.gentoo.org/639998)
+- [x] OpenEXR Suite: see [PR](https://github.com/gentoo/gentoo/pull/10030) and [Bug](https://bugs.gentoo.org/639998)
 - [x] media-gfx/alembic has 1.7.9 -> see [Bugzilla](https://bugs.gentoo.org/667230) and [PR](https://github.com/gentoo/gentoo/pull/10003)
 
 ## Less needed packages not in official trees
