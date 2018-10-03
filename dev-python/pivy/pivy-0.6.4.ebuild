@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -19,8 +19,8 @@ IUSE=""
 S="${WORKDIR}/Coin3D-pivy-a84100beff22"
 
 RDEPEND="
-	~media-libs/coin-4.0.0a_pre20180921:=
-	~media-libs/SoQt-1.6.0a_pre20180813:=
+	~media-libs/coin-4.0.0a_pre20181002:=
+	~media-libs/SoQt-1.6.0a_pre20181003:=
 "
 DEPEND="
 	${RDEPEND}
