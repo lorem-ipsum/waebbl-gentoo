@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 51bd4b0..43fc926 100644
+index 51bd4b0..bae5fa2 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -17,6 +17,21 @@ include(GNUInstallDirs)
+@@ -17,6 +17,20 @@ include(GNUInstallDirs)
  
  option(SIMAGE_BUILD_SHARED_LIBS "Build shared libraries" ON)
  option(USE_QT5 "Prefer Qt5 over Qt4 if available" ON)
@@ -10,21 +10,20 @@ index 51bd4b0..43fc926 100644
 +option(USE_JPEG2K "Build with support for the jpeg2k image file format" OFF)
 +option(USE_JPEG "Build with support for the jpeg image file format" OFF)
 +option(USE_PNG "Build with support for the png image file format" OFF)
-+option(USE_QUICKTIME "Build with support for the quicktime movie format" OFF)
 +option(USE_TIFF "Build with support for the TIFF image file format" OFF)
-+if(WIN32)
-+	option(USE_GDIPLUS "Build with support for .NET GdiPlus" OFF)
-+endif(WIN32)
 +option(USE_OGGVORBIS "Build with support for the ogg/vorbis audio format" OFF)
 +option(USE_SNDFILE "Build with support for libsndfile for reading and writing sound samples" OFF)
++if(APPLE)
++	option(USE_QUICKTIME "Build with support for the quicktime movie format" OFF)
++endif(APPLE)
 +if(WIN32)
++	option(USE_GDIPLUS "Build with support for .NET GdiPlus" OFF)
 +	option(USE_VFW "Build with support for Video for Windows" OFF)
 +endif(WIN32)
-+option(USE_GUILE "Build and install guile bindings for simage" OFF)
  
  if(USE_QT5)
  	find_package(Qt5 COMPONENTS Core Gui QUIET)
-@@ -31,17 +46,45 @@ else()
+@@ -31,17 +45,45 @@ else()
  	include(${QT_USE_FILE})
  endif()
  
@@ -80,15 +79,3 @@ index 51bd4b0..43fc926 100644
  
  check_cxx_source_compiles("
  	#include <CoreFoundation/CoreFoundation.h>
-@@ -156,7 +199,10 @@ check_include_files(guile/gh.h HAVE_GUILE_GH_H)
- check_include_files(inttypes.h HAVE_INTTYPES_H)
- set(HAVE_JASPER ${JASPER_FOUND})
- set(HAVE_JPEGLIB ${JPG_FOUND})
--check_include_files(libguile.h HAVE_LIBGUILE_H)
-+if(USE_GUILE)
-+	set(CMAKE_REQUIRED_INCLUDES "/usr/include/guile/2.0")
-+	check_include_files(libguile.h HAVE_LIBGUILE_H)
-+endif(USE_GUILE)
- check_include_files(memory.h HAVE_MEMORY_H)
- set(HAVE_PNGLIB ${PNG_FOUND})
- check_include_files(stdint.h HAVE_STDINT_H)

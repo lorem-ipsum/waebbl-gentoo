@@ -11,7 +11,7 @@ SRC_URI=""
 
 LICENSE="public-domain mpeg2enc"
 SLOT="0"
-IUSE="debug gif guile jpeg jpeg2k png qt5 quicktime sndfile tiff vorbis"
+IUSE="debug gif jpeg jpeg2k png qt5 sndfile tiff vorbis"
 
 SIMAGE_REPO_URI="https://bitbucket.org/Coin3D/simage"
 CPACK_D_REPO_URI="https://bitbucket.org/ggabbiani/cpack.d"
@@ -19,7 +19,6 @@ EHG_PROJECT="Coin3D"
 
 RDEPEND="
 	gif? ( media-libs/giflib )
-	guile? ( >=dev-scheme/guile-2.0.14-r3:12 )
 	jpeg? ( virtual/jpeg:0= )
 	jpeg2k? ( media-libs/jasper )
 	png? ( media-libs/libpng:0= )
@@ -27,7 +26,6 @@ RDEPEND="
 		dev-qt/qtcore:5
 		dev-qt/qtgui:5
 	)
-	quicktime? ( media-libs/libquicktime:= )
 	sndfile? ( media-libs/libsndfile )
 	tiff? ( media-libs/tiff:0= )
 	vorbis? (
@@ -70,13 +68,11 @@ src_configure() {
 		-DSIMAGE_TGA_SUPPORT=ON
 		-DSIMAGE_XWD_SUPPORT=ON
 		-DUSE_GIF=$(usex gif)
-		-DUSE_GUILE=$(usex guile)
 		-DUSE_JPEG=$(usex jpeg)
 		-DUSE_JPEG2K=$(usex jpeg2k)
 		-DUSE_OGGVORBIS=$(usex vorbis)
 		-DUSE_PNG=$(usex png)
 		-DUSE_QT5=ON
-		-DUSE_QUICKTIME=$(usex quicktime)
 		-DUSE_SNDFILE=$(usex sndfile)
 		-DUSE_TIFF=$(usex tiff)
 	)
