@@ -1,16 +1,17 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
-inherit eutils java-utils-2 versionator
+inherit eapi7-ver eutils java-utils-2
 
-MY_PV="$(replace_all_version_separators _)"
+#MY_PV="$(replace_all_version_separators _)"
+MY_PV="$(ver_rs 1- '_')"
 MY_P="${PN}-linux-${MY_PV}"
 
 DESCRIPTION="Git client with support for GitHub Pull Requests+Comments, SVN and Mercurial"
-HOMEPAGE="http://www.syntevo.com/smartgit"
-SRC_URI="http://www.syntevo.com/download/?file=${PN}/${MY_P}.tar.gz"
+HOMEPAGE="https://www.syntevo.com/smartgit"
+SRC_URI="https://www.syntevo.com/downloads/smartgit/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="smartgit"
@@ -25,7 +26,7 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}"/${PN}
 
 pkg_nofetch(){
-	einfo "Please download ${A} from:"
+	einfo "Please download ${MY_P} from:"
 	einfo "http://www.syntevo.com/smartgit/download"
 	einfo "and move/copy to ${DISTDIR}"
 }
