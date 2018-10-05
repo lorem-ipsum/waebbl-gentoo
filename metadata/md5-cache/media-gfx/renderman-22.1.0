@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install nofetch postinst test unpack
+DEPEND=>=app-arch/rpm2targz-9.0.0.3g
+DESCRIPTION=Renderman render engine
+EAPI=6
+HOMEPAGE=https://renderman.pixar.com/
+IUSE=video_cards_nvidia abi_x86_64
+KEYWORDS=~amd64 ~x86
+LICENSE=RenderMan-TMPL
+RDEPEND=app-arch/bzip2[abi_x86_64(-)?] app-arch/lz4[abi_x86_64(-)?] app-arch/xz-utils[abi_x86_64(-)?] dev-libs/elfutils[abi_x86_64(-)?] dev-libs/expat[abi_x86_64(-)?] dev-libs/libbsd[abi_x86_64(-)?] dev-libs/libffi[abi_x86_64(-)?] dev-libs/libgpg-error[abi_x86_64(-)?] dev-libs/glib[abi_x86_64(-)?] dev-libs/libgcrypt:0[abi_x86_64(-)?] dev-libs/libpcre[abi_x86_64(-)?] media-gfx/graphite2[abi_x86_64(-)?] media-libs/fontconfig[abi_x86_64(-)?] media-libs/freetype[abi_x86_64(-)?] media-libs/harfbuzz[abi_x86_64(-)?] media-libs/libpng:0[abi_x86_64(-)?] media-libs/mesa[abi_x86_64(-)?] sys-apps/dbus[abi_x86_64(-)?] sys-apps/systemd[abi_x86_64(-)?] sys-apps/util-linux[abi_x86_64(-)?] sys-libs/libcap[abi_x86_64(-)?] sys-libs/zlib[abi_x86_64(-)?] virtual/opengl[abi_x86_64(-)?] x11-libs/libICE[abi_x86_64(-)?] x11-libs/libSM[abi_x86_64(-)?] x11-libs/libX11[abi_x86_64(-)?] x11-libs/libXau[abi_x86_64(-)?] x11-libs/libXdmcp[abi_x86_64(-)?] x11-libs/libXext[abi_x86_64(-)?] x11-libs/libXi[abi_x86_64(-)?] x11-libs/libXrender[abi_x86_64(-)?] x11-libs/libxcb[abi_x86_64(-)?] video_cards_nvidia? ( x11-drivers/nvidia-drivers[abi_x86_64(-)?] )
+REQUIRED_USE=|| ( abi_x86_64 )
+RESTRICT=bindist mirror fetch strip
+SLOT=0
+SRC_URI=RenderMan-InstallerNCR-22.1.0_1891132-linuxRHEL7_gcc48icc170.x86_64.rpm
+_eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	a1bf4756dba418a7238f3be0cb010c54	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	ltprune	08f9e1d9ee0af8f5d9a7854efbcd8c0e	multibuild	40fe59465edacd730c644ec2bc197809	multilib	b2f01ad412baf81650c23fcf0975fa33	multilib-build	b42436dc1260f475af229754c165cb6b	multilib-minimal	8bddda43703ba94d8341f4e247f97566	preserve-libs	ef207dc62baddfddfd39a164d9797648	rpm	f52cfa3a435468d86d3b49c357b9cb35	toolchain-funcs	f164325a2cdb5b3ea39311d483988861	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
+_md5_=2f2a1fc5f1e61ede4e4aa8f90d2eec90
