@@ -1,11 +1,11 @@
-DEFINED_PHASES=install unpack
+DEFINED_PHASES=install
 DESCRIPTION=RenderMan addon for blender
 EAPI=6
 HOMEPAGE=https://github.com/prman-pixar/RenderManForBlender
-KEYWORDS=~amd64
+KEYWORDS=~amd64 ~x86
 LICENSE=MIT
 RDEPEND=>=media-gfx/blender-2.78 >=media-gfx/renderman-21.5.0
 SLOT=0
 SRC_URI=https://github.com/prman-pixar/RenderManForBlender/archive/v21_5_0.tar.gz -> renderman-for-blender-21.5.0.tar.gz
-_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	vcs-snapshot	b77011b62e2053c646ad720defe6d921	versionator	2352c3fc97241f6a02042773c8287748
-_md5_=2ca1aaba172f279a5ac9981d40b804ab
+_eclasses_=eapi7-ver	756b3f27d8e46131d5cf3c51bd876446
+_md5_=113635052b08b2b55922fb8aa91bdc11
