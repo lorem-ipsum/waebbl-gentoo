@@ -1,6 +1,6 @@
 ## Packages to check and possibly include
 
-- [ ] [sci-libs/mumps](http://mumps.enseeiht.fr) availabe in science overlay in outdated version, needs manual download? Has been included in official tree and updated to current release. Ebuild Depends on old scotch-5.1 and does not support current scotch-6.
+- [x] [sci-libs/mumps](http://mumps.enseeiht.fr) availabe in science overlay in outdated version, needs manual download? Has been included in official tree and updated to current release. Ebuild Depends on old scotch-5.1 and does not support current scotch-6 -> https://github.com/gentoo/gentoo/pull/10378
 - [ ] [sci-misc/elmer](https://github.com/ElmerCSC/elmerfem) available in science overlay in outdated version as meta and subpackages. Possibly only need one package with latest version
 - [ ] [net-im/quaternion](https://github.com/QMatrixClient/Quaternion) new package: Qt5 client for matrix protocol
 - [ ] [sci-mathematics/salome-meta](https://salome-platform.org/) new package: probably use salome-platform as package name without the need for meta and subpackages. Tool for numerical simulation. Currently the subpackage sci-libs/libmed is available
@@ -35,7 +35,7 @@
 ## Packages which need updating
 
 - [ ] improve freecad support by adding the missing dependencies
-- [x] dev-python/pyside: need a local ebuild? On [Qt for Python](http://wiki.qt.io/Qt_for_Python/GettingStarted/X11) they say, the same version as Qt is needed. The ebuild from qt overlay uses branch 5.9, but people (including me) might have installed Qt 5.11 already. Also there would be no cross-repo dependency.
+- [x] dev-python/pyside: need a local ebuild? On [Qt for Python](http://wiki.qt.io/Qt_for_Python/GettingStarted/X11) they say, the same version as Qt is needed. The ebuild from qt overlay uses branch 5.9, but people (including me) might have installed Qt 5.11 already. Also there would be no cross-repo dependency -> https://github.com/gentoo/gentoo/pull/10085
 - [ ] games-util/simulationcraft new version 801-01: check if cmake is working
 
 
