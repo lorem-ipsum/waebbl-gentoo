@@ -1,11 +1,11 @@
 DEFINED_PHASES=compile install prepare
 DEPEND=>=dev-lang/ocaml-4.04.2[ocamlopt] dev-util/elkhound doc? ( >=dev-tex/hevea-2.29[ocamlopt] >=dev-lang/perl-5.24.3 )
 DESCRIPTION=Develop, distribute and install mods for Infinity Engine games.
-EAPI=6
+EAPI=7
 HOMEPAGE=https://www.weidu.org https://github.com/WeiDUorg/weidu
 IUSE=doc
 KEYWORDS=~amd64
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=https://github.com/WeiDUorg/weidu/archive/v246.00.tar.gz -> weidu-246.00.tar.gz
-_md5_=dbf0420d894ad1ba2966df469eb11532
+_md5_=8fd5dd13ebe96e7772ac9a0a3c39f143

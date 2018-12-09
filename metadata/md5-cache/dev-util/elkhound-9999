@@ -1,11 +1,12 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install unpack
-DEPEND=>=dev-lang/perl-5.24.3 sys-devel/flex virtual/yacc doc? ( >=media-gfx/graphviz-2.38.0-r1[svg] ) >=dev-vcs/git-1.8.2.1[curl]
+DEPEND=>=dev-lang/perl-5.24.3 sys-devel/flex virtual/yacc doc? ( >=media-gfx/graphviz-2.38.0-r1[svg] )
 DESCRIPTION=Elkhound is a GLR parser generator
-EAPI=6
+EAPI=7
 HOMEPAGE=http://scottmcpeak.com/elkhound
 IUSE=doc
 KEYWORDS=~amd64
 LICENSE=BSD
 SLOT=0
 _eclasses_=git-r3	0d4635eeb5a96cd5315597a47eba25c9
-_md5_=f11c2fdcd9c94983c069a8a2a5e59349
+_md5_=149fcb0573bde3fbf7a4a6afac63fb6e
