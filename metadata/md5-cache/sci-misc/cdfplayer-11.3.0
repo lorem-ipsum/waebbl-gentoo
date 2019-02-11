@@ -8,5 +8,5 @@ RDEPEND=x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXau x11-libs/
 RESTRICT=strip mirror bindist fetch
 SLOT=0
 SRC_URI=CDFPlayer_11.3.0_LINUX.sh
-_eclasses_=xdg-utils	93b2dfbb00a09161e1e7f6360c0f7f6b
+_eclasses_=xdg-utils	14d00d009167652b1fa363e55effe213
 _md5_=7198e175824148f25f550cde041eedc8
