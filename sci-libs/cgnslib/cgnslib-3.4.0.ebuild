@@ -30,9 +30,9 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/CGNS-${PV}"
 
+#	"${FILESDIR}"/${P}-fix-matherr.patch
 PATCHES=(
 	"${FILESDIR}"/${P}-fix-libdir.patch
-	"${FILESDIR}"/${P}-fix-matherr.patch
 )
 
 pkg_setup() {
