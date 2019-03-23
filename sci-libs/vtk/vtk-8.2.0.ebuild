@@ -1,13 +1,13 @@
-# Copyright 1999-2018 Gentoo Authors
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
 PYTHON_COMPAT=( python3_6 )
 WEBAPP_OPTIONAL=yes
 WEBAPP_MANUAL_SLOT=yes
 
-inherit cmake-utils eapi7-ver flag-o-matic java-pkg-opt-2 python-single-r1 qmake-utils toolchain-funcs virtualx webapp
+inherit cmake-utils flag-o-matic java-pkg-opt-2 python-single-r1 qmake-utils toolchain-funcs virtualx webapp
 
 # Short package version
 SPV="$(ver_cut 1-2)"
@@ -113,12 +113,14 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 PATCHES=(
-	"${FILESDIR}/${PF}-fix-designer-plugin-install-dir.patch"
+	"${FILESDIR}/${P}-libdir.patch"
+	"${FILESDIR}/${P}-fix-designer-plugin-install-dir.patch"
 )
 
 S="${WORKDIR}"/VTK-${PV}
 
 RESTRICT="test"
+CMAKE_BUILD_TYPE="Release"
 
 pkg_setup() {
 	use java && java-pkg-opt-2_pkg_setup
@@ -129,14 +131,11 @@ pkg_setup() {
 src_prepare() {
 	local x
 	# missing: VPIC freerange sqlite utf8 verdict xmdf2 xmdf3
-	for x in constantly expat freetype hdf5 hyperlink incremental jpeg jsoncpp libharu libproj4 libxml2 lz4 mpi4py netcdf oggtheora png tiff Twisted txaio zlib ZopeInterface; do
+	for x in expat freetype hdf5 jpeg jsoncpp libharu libxml2 lz4 mpi4py netcdf png tiff zlib; do
 		ebegin "Dropping bundled ${x}"
 		rm -r ThirdParty/${x}/vtk${x} || die
 		eend $?
 	done
-	rm -r \
-		ThirdParty/AutobahnPython/vtkAutobahn \
-		|| die
 
 	if use doc; then
 		einfo "Removing .md5 files from documents."
@@ -152,49 +151,36 @@ src_configure() {
 	# general configuration
 	local mycmakeargs=(
 		-Wno-dev
-		-DVTK_DIR="${S}"
 		-DVTK_INSTALL_LIBRARY_DIR=$(get_libdir)
 		-DVTK_INSTALL_DOC_DIR="${EPREFIX}/usr/share/doc/${PF}"
 		-DVTK_DATA_ROOT="${EPREFIX}/usr/share/${PN}/data"
 		-DVTK_CUSTOM_LIBRARY_SUFFIX=""
+		-DVTK_FORBID_DOWNLOADS=ON
+		-DVTK_GENERATE_MODULES_JSON=ON
 		-DBUILD_SHARED_LIBS=ON
-		-DVTK_USE_SYSTEM_AUTOBAHN=ON
-		-DVTK_USE_SYSTEM_CONSTANTLY=ON
 		-DVTK_USE_SYSTEM_EXPAT=ON
 		-DVTK_USE_SYSTEM_FREETYPE=ON
 		# Use bundled gl2ps (bundled version is a patched version of 1.3.9. Post 1.3.9 versions should be compatible)
 		-DVTK_USE_SYSTEM_GL2PS=OFF
 		-DVTK_USE_SYSTEM_HDF5=ON
-		-DVTK_USE_SYSTEM_HYPERLINK=ON
-		-DVTK_USE_SYSTEM_INCREMENTAL=ON
 		-DVTK_USE_SYSTEM_JPEG=ON
-		-DVTK_USE_SYSTEM_LIBPROJ4=ON
 		-DVTK_USE_SYSTEM_LIBXML2=ON
 		-DVTK_USE_SYSTEM_MPI4PY=ON
 		-DVTK_USE_SYSTEM_NETCDF=ON
-		-DVTK_USE_SYSTEM_OGGTHEORA=ON
 		-DVTK_USE_SYSTEM_PNG=ON
 		-DVTK_USE_SYSTEM_SIX=ON
 		-DVTK_USE_SYSTEM_TIFF=ON
-		-DVTK_USE_SYSTEM_TWISTED=ON
-		-DVTK_USE_SYSTEM_TXAIO=ON
 		-DVTK_USE_SYSTEM_XDMF2=OFF
-		-DVTK_USE_SYSTEM_XDMF3=OFF
 		-DVTK_USE_SYSTEM_ZLIB=ON
-		-DVTK_USE_SYSTEM_ZOPE=ON
 		-DVTK_USE_SYSTEM_LIBRARIES=ON
 		# Use bundled diy2 (no gentoo package / upstream does not provide a Finddiy2.cmake or diy2Config.cmake / diy2-config.cmake)
 		-DVTK_USE_SYSTEM_DIY2=OFF
-		-DVTK_USE_GL2PS=ON
 		-DVTK_USE_LARGE_DATA=ON
-		-DVTK_USE_PARALLEL=ON
 		-DVTK_EXTRA_COMPILER_WARNINGS=ON
 		-DVTK_Group_StandAlone=ON
 		-DBUILD_DOCUMENTATION=$(usex doc)
 		-DBUILD_EXAMPLES=$(usex examples)
-		-DBUILD_VTK_BUILD_ALL_MODULES_FOR_TESTS=off
 		-DVTK_BUILD_ALL_MODULES=$(usex all-modules)
-		-DUSE_DOCUMENTATION_HTML_HELP=$(usex doc)
 		-DVTK_Group_Imaging=$(usex imaging)
 		-DVTK_Group_MPI=$(usex mpi)
 		-DVTK_Group_Rendering=$(usex rendering)
@@ -204,19 +190,13 @@ src_configure() {
 		-DVTK_WWW_DIR="${ED%/}/${MY_HTDOCSDIR}"
 		-DVTK_WRAP_JAVA=$(usex java)
 		-DVTK_WRAP_PYTHON=$(usex python)
-		-DVTK_WRAP_PYTHON_SIP=$(usex python)
-		-DVTK_WRAP_TCL=$(usex tcl)
-		-DVTK_USE_BOOST=$(usex boost)
-		-DUSE_VTK_USE_BOOST=$(usex boost)
 		-DModule_vtkInfovisBoost=$(usex boost)
 		-DModule_vtkInfovisBoostGraphAlgorithms=$(usex boost)
-		-DVTK_USE_ODBC=$(usex odbc)
 		-DModule_vtkIOODBC=$(usex odbc)
 		-DVTK_USE_OFFSCREEN=$(usex offscreen)
 		-DVTK_OPENGL_HAS_OSMESA=$(usex offscreen)
 		-DVTK_USE_OGGTHEORA_ENCODER=$(usex theora)
 		-DVTK_USE_NVCONTROL=$(usex video_cards_nvidia)
-		-DModule_vtkFiltersStatisticsGnuR=$(usex R)
 		-DVTK_USE_X=$(usex X)
 	# IO
 		-DVTK_USE_FFMPEG_ENCODER=$(usex ffmpeg)
@@ -243,40 +223,20 @@ src_configure() {
 
 	if use python; then
 		mycmakeargs+=(
-			-DVTK_INSTALL_PYTHON_MODULE_DIR="$(python_get_sitedir)"
 			-DPYTHON_INCLUDE_DIR="$(python_get_includedir)"
 			-DPYTHON_LIBRARY="$(python_get_library_path)"
-			-DSIP_PYQT_DIR="${EPREFIX}/usr/share/sip"
-			-DSIP_INCLUDE_DIR="$(python_get_includedir)"
-			-DVTK_PYTHON_INCLUDE_DIR="$(python_get_includedir)"
-			-DVTK_PYTHON_LIBRARY="$(python_get_library_path)"
-			-DVTK_PYTHON_SETUP_ARGS:STRING="--prefix=${EPREFIX} --root=${D}"
 			-DVTK_USE_SYSTEM_SIX=ON
 		)
 	fi
 
 	if use qt5; then
 		mycmakeargs+=(
-			-DVTK_USE_QVTK=ON
-			-DVTK_USE_QVTK_OPENGL=ON
-			-DVTK_USE_QVTK_QTOPENGL=ON
-			-DQT_WRAP_CPP=ON
-			-DQT_WRAP_UI=ON
 			-DVTK_INSTALL_QT_DIR="$(qt5_get_libdir)/qt5/plugins/designer"
-			-DDESIRED_QT_VERSION=5
 			-DVTK_QT_VERSION=5
 			-DQT_MOC_EXECUTABLE="$(qt5_get_bindir)/moc"
 			-DQT_UIC_EXECUTABLE="$(qt5_get_bindir)/uic"
-			-DQT_INCLUDE_DIR="${EPREFIX}/usr/include/qt5"
 			-DQT_QMAKE_EXECUTABLE="$(qt5_get_bindir)/qmake"
 			-DVTK_Group_Qt:BOOL=ON
-		)
-	fi
-
-	if use R; then
-		mycmakeargs+=(
-			-DR_LIBRARY_BLAS=/usr/$(get_libdir)/R/lib/libR.so
-			-DR_LIBRARY_LAPACK=/usr/$(get_libdir)/R/lib/libR.so
 		)
 	fi
 
