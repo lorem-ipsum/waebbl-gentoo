@@ -8,5 +8,5 @@ LICENSE=XEphem
 RDEPEND=>=x11-libs/motif-2.3:0 virtual/jpeg:0= media-libs/libpng:0=
 SLOT=0
 SRC_URI=http://97.74.56.125/free/xephem-3.7.7.tar.gz
-_eclasses_=multilib	1d91b03d42ab6308b5f4f6b598ed110e	toolchain-funcs	b45201c4e6c096b98e250336954e64b9
+_eclasses_=multilib	1d91b03d42ab6308b5f4f6b598ed110e	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
 _md5_=8aaa3ffae58c9b94918b8693692c4d3e
