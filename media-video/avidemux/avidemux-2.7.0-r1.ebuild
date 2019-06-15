@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Authors
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -45,12 +45,9 @@ PDEPEND="~media-libs/avidemux-plugins-${PV}:${SLOT}[opengl?,qt5?]"
 
 S="${WORKDIR}/${MY_P}"
 
-#PATCHES="${FILESDIR}/${P}-link-Xext.patch"
-
 src_prepare() {
-	default
-	# using PATCHES variable fails with trying to apply it at least 3 times
-	eapply "${FILESDIR}/${P}-link-Xext.patch"
+	eapply "${FILESDIR}/${P}-glibc-2.27.patch"
+	eapply "${FILESDIR}/${P}-qt-5.11.patch"
 
 	processes="buildCli:avidemux/cli"
 	if use qt5 ; then
@@ -99,6 +96,9 @@ src_configure() {
 	# The build relies on an avidemux-core header that uses 'nullptr'
 	# which is from >=C++11. Let's use the GCC-6 default C++ dialect.
 	append-cxxflags -std=c++14
+
+	# see bug #644166
+	append-ldflags -lXext
 
 	local mycmakeargs=(
 		-DGETTEXT="$(usex nls)"
