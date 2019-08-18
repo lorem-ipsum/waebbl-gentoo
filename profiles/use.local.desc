@@ -110,6 +110,7 @@ media-libs/draco:compat - Build in compatibility mode.
 media-libs/draco:gltf - Compile with support for glTF (GL Transmission Format) from The Khronos Group Inc.
 media-libs/embree:clang - Use sys-devel/clang to compile Embree
 media-libs/embree:ispc - Enables ISPC support for Embree through dev-lang/ispc
+media-libs/embree:raymask - Enable the ray masking feature
 media-libs/embree:tbb - Use Intel's threading library dev-cpp/tbb
 media-libs/embree:tutorial - Compile and install the Embree tutorials.
 media-libs/opensubdiv:cuda - Enable NVIDIA CUDA Toolkit support through dev-util/nvidia-cuda-toolkit.
