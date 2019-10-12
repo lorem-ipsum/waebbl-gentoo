@@ -42,7 +42,6 @@ media-libs/openexr 2.3.0: ILM's OpenEXR high dynamic-range image file format lib
 media-libs/opensubdiv 3.4.0: An Open-Source subdivision surface library
 media-libs/simage 1.7.1a_beta_pre20181003: Image and video texturing library
 media-sound/denemo 2.2.0: A music notation editor
-media-video/avidemux 2.7.0-r1: Video editor designed for simple cutting, filtering and encoding tasks
 sci-astronomy/xephem 3.7.7-r1: Interactive tool for astronomical ephemeris and sky simulation
 sci-electronics/uconfig 9999: Datasheet pinout extractor from PDF and library Stylizer for Kicad.
 sci-libs/calculix-ccx 2.10: A Free Software Three-Dimensional Structural Finite Element Program

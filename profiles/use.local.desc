@@ -127,7 +127,6 @@ media-sound/denemo:jack - Enable jack support through virtual/jack
 media-sound/denemo:portaudio - Enable support for media-libs/portaudio
 media-sound/denemo:portmidi - Enable support for the media-libs/portmidi backend
 media-sound/denemo:rubberband - Enable support for media-libs/rubberband
-media-video/avidemux:nvenc - Adds support for NVIDIA Encoder (NVENC) API for hardware accelerated encoding on NVIDIA cards.
 sci-libs/calculix-ccx:arpack - Add sparse eigen value support via sci-libs/arpack
 sci-libs/cgnslib:legacy - Enable or disable building legacy code (3.0 compatible)
 sci-libs/cgnslib:tools - A number of utility programs: cgnscheck, cgnscompress, cgnsdiff, cgnslist, cgnsnames, cgnsupdate, cgnsconvert, adf2hdf, hdf2adf.
