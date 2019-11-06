@@ -21,6 +21,7 @@ games-util/simulationcraft 801-r1 9999: SimulationCraft is a tool to explore com
 games-util/weidu 246.00 9999: Develop, distribute and install mods for Infinity Engine games.
 gnome-base/libgnomeui 2.24.5-r5: User Interface routines for Gnome
 media-gfx/alembic 1.7.9 1.7.10 1.7.11: Open framework for storing and sharing scene data
+media-gfx/aoi 2.5 2.7.2: A free, open-source 3D modelling and rendering studio
 media-gfx/awesomebump 5.0: Tool to generate different types of textures from a single image.
 media-gfx/blender 2.79b-r2: 3D Creation/Animation/Publishing System
 media-gfx/freecad 0.18.3 9999: QT based Computer Aided Design application
