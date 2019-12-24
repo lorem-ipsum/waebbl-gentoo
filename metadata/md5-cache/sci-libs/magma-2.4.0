@@ -11,5 +11,5 @@ RDEPEND=dev-util/nvidia-cuda-toolkit:= virtual/blas virtual/lapack virtual/fortr
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://icl.cs.utk.edu/projectsfiles/magma/downloads/magma-2.4.0.tar.gz -> magma-2.4.0.tar.gz
-_eclasses_=cuda	bb861e5221b7272ac90c2f12791c1e66	eutils	fcb2aa98e1948b835b5ae66ca52868c5	flag-o-matic	8a43b9830f1e64a7a5fc0a276afa0275	fortran-2	f75a2d9321053acf424991e805f32ede	multilib	1d91b03d42ab6308b5f4f6b598ed110e	python-any-r1	2a3000b370786b5c90a651e7dd7c4797	python-utils-r1	f7aef159261e9835066ddf8d3a0e3487	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c
+_eclasses_=cuda	bb861e5221b7272ac90c2f12791c1e66	eutils	fcb2aa98e1948b835b5ae66ca52868c5	flag-o-matic	cabe101302b461f32ecbc3767dfb9e23	fortran-2	f75a2d9321053acf424991e805f32ede	multilib	1d91b03d42ab6308b5f4f6b598ed110e	python-any-r1	2a3000b370786b5c90a651e7dd7c4797	python-utils-r1	f7aef159261e9835066ddf8d3a0e3487	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c
 _md5_=ac392116ceb2aefb690c734cb5377270
