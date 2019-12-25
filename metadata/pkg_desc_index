@@ -48,7 +48,6 @@ sci-electronics/uconfig 9999: Datasheet pinout extractor from PDF and library St
 sci-libs/calculix-ccx 2.10: A Free Software Three-Dimensional Structural Finite Element Program
 sci-libs/calculix-cgx 2.10: A Free Software Three-Dimensional Structural Finite Element Program
 sci-libs/cgnslib 3.4.0: CFD General Notation System standard library
-sci-libs/libmed 4.0.0-r1: A library to store and exchange meshed data or computation results
 sci-libs/magma 2.4.0: Matrix Algebra on GPU and Multicore Architectures
 sci-libs/opencascade 7.3.0: Development platform for CAD/CAE, 3D surface/solid modeling and data exchange
 sci-libs/parmetis 4.0.3: Parallel (MPI) unstructured graph partitioning library
