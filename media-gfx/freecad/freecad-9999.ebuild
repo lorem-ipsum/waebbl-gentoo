@@ -70,8 +70,15 @@ RDEPEND="
 	dev-python/matplotlib[${PYTHON_USEDEP}]
 	dev-python/numpy[${PYTHON_USEDEP}]
 	dev-python/pivy[${PYTHON_USEDEP}]
-	dev-python/pyside:2[gui,svg,${PYTHON_USEDEP}]
-	dev-python/shiboken:2[${PYTHON_USEDEP}]
+	|| (
+		dev-python/pyside:2[gui,svg,${PYTHON_USEDEP}]
+		dev-python/pyside2[gui,svg,${PYTHON_USEDEP}]
+	)
+	|| (
+		dev-python/shiboken:2[${PYTHON_USEDEP}]
+		dev-python/shiboken2[${PYTHON_USEDEP}]
+	)
+	dev-qt/assistant:5
 	dev-qt/designer:5
 	dev-qt/qtconcurrent:5
 	dev-qt/qtcore:5
@@ -84,14 +91,12 @@ RDEPEND="
 	dev-qt/qtwidgets:5
 	dev-qt/qtx11extras:5
 	dev-qt/qtxml:5
+	dev-qt/qtxmlpatterns:5
 	media-libs/coin[draggers(+),manipulators(+),nodekits(+),simage]
 	media-libs/freetype
 	media-libs/qhull
 	sci-libs/flann[mpi?,openmp]
-	|| (
-		>=sci-libs/med-4.0.0-r1[mpi(+)?,python,${PYTHON_USEDEP}]
-		>=sci-libs/libmed-4.0.0[mpi?,python,${PYTHON_USEDEP}]
-	)
+	>=sci-libs/med-4.0.0-r1[mpi(+)?,python,${PYTHON_USEDEP}]
 	sci-libs/orocos_kdl:=
 	sci-libs/opencascade:7.3.0[vtk(+)]
 	sys-libs/zlib
@@ -113,7 +118,10 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}"
 BDEPEND="
-	dev-python/pyside-tools:2[${PYTHON_USEDEP}]
+	|| (
+		dev-python/pyside-tools:2[${PYTHON_USEDEP}]
+		dev-python/pyside2-tools[${PYTHON_USEDEP}]
+	)
 	dev-lang/swig
 "
 
@@ -151,7 +159,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-9999-find-Coin.tag.patch"
 )
 
-CHECKREQS_DISK_BUILD="6.5G"
+CHECKREQS_DISK_BUILD="7G"
 
 [[ ${PV} == *9999 ]] && S="${WORKDIR}/freecad-${PV}" || S="${WORKDIR}/FreeCAD-${PV}"
 
@@ -270,16 +278,6 @@ src_install() {
 	fi
 
 	python_optimize "${ED}"/usr/share/${PN}/data/Mod/ "${ED}"/usr/$(get_libdir)/${PN}{/Ext,/Mod}/
+
+	docompress -x /usr/share/doc/${PF}/freecad.{qhc,qch}
 }
-
-#pkg_postinst() {
-#	xdg_icon_cache_update
-#	xdg_desktop_database_update
-#	xdg_mimeinfo_database_update
-#}
-
-#pkg_postrm() {
-#	xdg_mimeinfo_database_update
-#	xdg_desktop_database_update
-#	xdg_icon_cache_update
-#}
