@@ -41,7 +41,7 @@ media-libs/opencamlib 9999: C++ and Python library for 3D toolpaths
 media-libs/opencollada 1.6.68: Stream based read/write library for COLLADA files
 media-libs/openexr 2.3.0: ILM's OpenEXR high dynamic-range image file format libraries
 media-libs/opensubdiv 3.4.0: An Open-Source subdivision surface library
-media-libs/simage 1.7.1a_beta_pre20181003: Image and video texturing library
+media-libs/simage 1.7.1a_beta_pre20181003 1.8.0: Image and video texturing library
 media-sound/denemo 2.2.0: A music notation editor
 sci-astronomy/xephem 3.7.7-r1: Interactive tool for astronomical ephemeris and sky simulation
 sci-electronics/uconfig 9999: Datasheet pinout extractor from PDF and library Stylizer for Kicad.
