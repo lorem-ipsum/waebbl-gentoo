@@ -1,0 +1,16 @@
+BDEPEND=virtual/pkgconfig x11-base/xorg-proto doc? ( app-doc/doxygen qthelp? ( dev-qt/qthelp:5 ) ) dev-util/ninja dev-util/cmake
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=app-arch/bzip2 >=dev-libs/boost-1.65.0:= dev-libs/expat:= media-libs/fontconfig:= media-libs/freetype:2= sys-libs/zlib:= virtual/opengl virtual/glu x11-libs/libICE:= x11-libs/libSM:= x11-libs/libX11:= x11-libs/libXext:= javascript? ( dev-lang/spidermonkey:60= ) openal? ( media-libs/openal:= ) simage? ( media-libs/simage:= )
+DESCRIPTION=A high-level 3D graphics toolkit, fully compatible with SGI Open Inventor 2.1
+EAPI=7
+HOMEPAGE=https://coin3d.github.io/
+IUSE=+3ds debug doc +draggers +exceptions +javascript man +manipulators +nodekits +openal qthelp +simage static-libs test threads +vrml97
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RDEPEND=app-arch/bzip2 >=dev-libs/boost-1.65.0:= dev-libs/expat:= media-libs/fontconfig:= media-libs/freetype:2= sys-libs/zlib:= virtual/opengl virtual/glu x11-libs/libICE:= x11-libs/libSM:= x11-libs/libX11:= x11-libs/libXext:= javascript? ( dev-lang/spidermonkey:60= ) openal? ( media-libs/openal:= ) simage? ( media-libs/simage:= )
+REQUIRED_USE=draggers? ( nodekits ) javascript? ( vrml97 ) man? ( doc ) manipulators? ( nodekits ) qthelp? ( doc )
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://github.com/coin3d/coin/archive/Coin-4.0.0.tar.gz -> coin-4.0.0.tar.gz
+_eclasses_=cmake	7b250250bd1c3cc90800ed668fb87825	eutils	fcb2aa98e1948b835b5ae66ca52868c5	flag-o-matic	cabe101302b461f32ecbc3767dfb9e23	multilib	1d91b03d42ab6308b5f4f6b598ed110e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
+_md5_=9b622b02d2948dfcf57b033be6be4051
