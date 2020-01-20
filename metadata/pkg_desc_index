@@ -31,7 +31,7 @@ media-gfx/openexr_viewers 2.3.0: OpenEXR Viewers
 media-gfx/openvdb 5.1.0 5.2.0: Libs for the efficient manipulation of volumetric data
 media-gfx/renderman 22.1.0: Renderman render engine
 media-gfx/renderman-for-blender 21.5.0: RenderMan addon for blender
-media-libs/SoQt 1.6.0a_pre20180813 1.6.0a_pre20181221 9999: The glue between Coin3D and Qt
+media-libs/SoQt 1.6.0 1.6.0a_pre20180813 1.6.0a_pre20181221 9999: The glue between Coin3D and Qt
 media-libs/coin 4.0.0 4.0.0a_pre20180921 4.0.0a_pre20181221 9999: A high-level 3D graphics toolkit, fully compatible with SGI Open Inventor 2.1
 media-libs/draco 1.3.5 1.3.5-r1: Library for compressing and decompressing 3D geometric objects
 media-libs/embree 3.5.2 9999: Collection of high-performance ray tracing kernels

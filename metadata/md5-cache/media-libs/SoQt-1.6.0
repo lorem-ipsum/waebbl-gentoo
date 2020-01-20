@@ -1,0 +1,15 @@
+BDEPEND=virtual/pkgconfig doc? ( app-doc/doxygen ) dev-util/ninja dev-util/cmake
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=~media-libs/coin-4.0.0 virtual/opengl dev-qt/qtcore:5= dev-qt/qtgui:5= dev-qt/qtopengl:5= dev-qt/qtwidgets:5= qthelp? ( dev-qt/qthelp:5= ) spacenav? ( >=dev-libs/libspnav-0.2.2:= )
+DESCRIPTION=The glue between Coin3D and Qt
+EAPI=7
+HOMEPAGE=https://github.com/coin3d/soqt
+IUSE=+coin-iv-extensions doc man qthelp spacenav
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RDEPEND=~media-libs/coin-4.0.0 virtual/opengl dev-qt/qtcore:5= dev-qt/qtgui:5= dev-qt/qtopengl:5= dev-qt/qtwidgets:5= qthelp? ( dev-qt/qthelp:5= ) spacenav? ( >=dev-libs/libspnav-0.2.2:= )
+REQUIRED_USE=man? ( doc ) qthelp? ( doc )
+SLOT=0
+SRC_URI=https://github.com/coin3d/soqt/archive/SoQt-1.6.0.tar.gz https://github.com/coin3d/soanydata/archive/3ff6e9203fbb0cc08a2bdf209212b7ef4d78a1f2.zip https://github.com/coin3d/sogui/archive/100612bf4016916dd686e2b6fecf8ac23d3db14d.zip
+_eclasses_=cmake	7b250250bd1c3cc90800ed668fb87825	eutils	fcb2aa98e1948b835b5ae66ca52868c5	flag-o-matic	cabe101302b461f32ecbc3767dfb9e23	multilib	1d91b03d42ab6308b5f4f6b598ed110e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
+_md5_=386aa716f37feca45302c9ce158384d6

@@ -96,6 +96,7 @@ media-gfx/luxcorerender:opencl - Build with OpenCL support
 media-gfx/openexr_viewers:cg - Add support for nvidia's cg shaders
 media-gfx/openvdb:abi4-compat - Build openvdb with compatibility for older ABIs
 media-libs/SoQt:coin-iv-extensions - Enables extra open inventor extensions
+media-libs/SoQt:man - Build and install man pages
 media-libs/SoQt:qthelp - Enable qthelp documentation
 media-libs/SoQt:spacenav - Add support for SpaceNavigator and friends through dev-libs/libspnav.
 media-libs/coin:3ds - Enables 3ds import capabilities
