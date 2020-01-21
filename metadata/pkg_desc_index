@@ -6,7 +6,7 @@ dev-lang/ispc 1.11.0 9999: Intel SPMD Program Compiler
 dev-libs/qtnproperty 1.0.1 9999: Tool to extend properties in the Qt5 framework.
 dev-libs/tvision 2.2.1.4: Text User Interface that implements the well known CUA widgets
 dev-python/ebuildtester 9999: A dockerized approach to test a Gentoo package within a clean stage3 container
-dev-python/pivy 0.6.4 9999: Coin3d bindings for Python
+dev-python/pivy 0.6.4 0.6.5 9999: Coin3d bindings for Python
 dev-python/pycollada 0.6 0.6-r1: Python library for reading and writing COLLADA documents
 dev-python/pyilmbase 2.3.0: ilmbase Python bindings
 dev-python/pyside 5.11.1 9999: Python bindings for the Qt framework
