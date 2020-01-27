@@ -14,7 +14,7 @@ dev-python/pyside-tools 5.11.1 9999: PySide development tools (lupdate, rcc, uic
 dev-python/shiboken 5.11.1 9999: Tool for creating Python bindings for C++ libraries
 dev-util/codespell 1.15.0: Check text files for common misspellings
 dev-util/elkhound 9999: Elkhound is a GLR parser generator
-dev-util/pybind11 2.2.4 2.3.0: Seamless operability between C++11 and Python
+dev-util/pybind11 2.2.4 2.3.0 2.4.3: Seamless operability between C++11 and Python
 dev-util/smartgit 18.2.8: Git client with support for GitHub Pull Requests+Comments, SVN and Mercurial
 games-misc/wtf 20190630: Translates acronyms for you
 games-util/simulationcraft 801-r1 9999: SimulationCraft is a tool to explore combat mechanics in World of Warcraft.
