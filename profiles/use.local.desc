@@ -82,11 +82,12 @@ media-gfx/freecad:openscad - Build the OpenSCAD module for interoperability with
 media-gfx/freecad:part_design - Build the part design module and workbench for build part shapes from sketches
 media-gfx/freecad:path - FIXME: auto-enable throught robot? Build the path module and workbench to procude G-Code instructions for CNC
 media-gfx/freecad:pcl - Use external sci-libs/pcl for point clouds support.
+media-gfx/freecad:plot - Build the internal plot workbench. NOTE: This conflicts with the external plot workbench, which you can add via the Addon Manager!
 media-gfx/freecad:points - Build the points module and workbench for working with point clouds
 media-gfx/freecad:raytracing - Build the raytracing module and workbench for raytracing and rendering
 media-gfx/freecad:reverseengineering - Build the reverse engineering module and workbench which provides specific tools to convert shapes/solids/meshes into parametric FreeCAD-compatible features
 media-gfx/freecad:robot - Build the robot module and workbench for studying robot movements
-media-gfx/freecad:ship - Build the ship module and workbench which works over ship entities, that must be created on top of provided geometry
+media-gfx/freecad:ship - Build the ship module and workbench which works over ship entities, that must be created on top of provided geometry. NOTE: This conflicts with the external ship workbench, which you can add via the Addon Manager!
 media-gfx/freecad:show - Build the show module, a helper module for visibility automation
 media-gfx/freecad:spreadsheet - Build the spreadsheet module and workbench to create and manipulate spreadsheet data
 media-gfx/freecad:surface - Build the surface module and workbench
