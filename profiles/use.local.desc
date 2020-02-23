@@ -5,35 +5,6 @@
 dev-lang/ispc:sanitize - Build with address sanitizer instrumentation using clang
 dev-libs/qtnproperty:demo - Build and install the demo program.
 dev-python/pyilmbase:numpy - Add bindings for dev-python/numpy use.
-dev-python/pyside:3d - Build Qt3DCore, Qt3DAnimation, Qt3DInput, Qt3DLogic, Qt3DRender and Qt3DExtras modules
-dev-python/pyside:charts - Build QtCharts module
-dev-python/pyside:concurrent - Build QtConcurrent module
-dev-python/pyside:datavis - Build QtDataVisualization module
-dev-python/pyside:declarative - Build QtQml, QtQuick, and QtQuickWidgets modules
-dev-python/pyside:designer - Build QtDesigner and QtUiTools modules
-dev-python/pyside:gui - Build QtGui module
-dev-python/pyside:help - Build QtHelp module
-dev-python/pyside:location - Build QtLocation module
-dev-python/pyside:multimedia - Build QtMultimedia and QtMultimediaWidgets modules
-dev-python/pyside:network - Build QtNetwork module
-dev-python/pyside:opengl - Build QtOpenGL module
-dev-python/pyside:positioning - Build QtPositioning module
-dev-python/pyside:printsupport - Build QtPrintSupport module
-dev-python/pyside:script - Build QtScript module
-dev-python/pyside:scripttools - Build QtScriptTools module
-dev-python/pyside:scxml - Build QtScxml module
-dev-python/pyside:sensors - Build QtSensors module
-dev-python/pyside:speech - Build QtTextToSpeech module
-dev-python/pyside:sql - Build QtSql module
-dev-python/pyside:svg - Build QtSvg module
-dev-python/pyside:testlib - Build QtTest module
-dev-python/pyside:webchannel - Build QtWebChannel module
-dev-python/pyside:webengine - Build QtWebEngine, QtWebEngineCore and QtWebEngineWidgets modules
-dev-python/pyside:websockets - Build QtWebSockets module
-dev-python/pyside:widgets - Build QtWidgets module
-dev-python/pyside:x11extras - Build QtX11Extras module
-dev-python/pyside:xmlpatterns - Build QtXmlPatterns module
-dev-python/shiboken:numpy - Enable NumPy-based 2D array support
 games-util/simulationcraft:gui - Builds the Qt5 GUI
 media-gfx/alembic:arnold - Add support for arnold renderer (experimental)
 media-gfx/alembic:boost - Use dev-libs/boost library
@@ -44,32 +15,9 @@ media-gfx/alembic:prman - Compile Alembic plugin for Renderman (experimental)
 media-gfx/alembic:python - Build pyalembic python bindings (needs dev-python/pyilmbase)
 media-gfx/alembic:test - Build and run the test-suite
 media-gfx/alembic:zlib - Use sys-libs/zlib for compressions
-media-gfx/blender:alembic - Enable im- and export of alembic (.abc) files through media-gfx/alembic
-media-gfx/blender:bullet - Enable Bullet (Physics Engine).
-media-gfx/blender:collada - Add support for Collada interchange format through media-libs/opencollada.
-media-gfx/blender:color-management - Enable color management via media-libs/opencolorio.
-media-gfx/blender:cuda - Build cycles renderer with nVidia CUDA support.
-media-gfx/blender:cycles - Build cycles renderer (requires media-libs/openimageio and dev-libs/boost).
-media-gfx/blender:dds - Adds DDS textures support to Blender.
-media-gfx/blender:doc - Build C and Python API documentation directly from the source code.
-media-gfx/blender:elbeem - Adds surface fluid simulation to Blender using El'Beem library.
-media-gfx/blender:game-engine - Adds Game Engine support to Blender.
-media-gfx/blender:headless - Build without graphical support (renderfarm, server mode only).
-media-gfx/blender:llvm - Enable features depending on llvm.
-media-gfx/blender:man - Build and install man pages.
-media-gfx/blender:ndof - Enable NDOF input devices (SpaceNavigator and friends).
-media-gfx/blender:opencl - Allow OpenCL Graphics Acceleration. This may require extra graphics card drivers.
-media-gfx/blender:openimageio - Enable OpenImageIO Support
-media-gfx/blender:opensubdiv - Add rendering support form OpenSubdiv from Dreamworks Animation through media-libs/opensubdiv.
-media-gfx/blender:openvdb - Add GPU preview rendering. Only works with nVidia cards.
-media-gfx/blender:osl - Add support for OpenShadingLanguage scripting.
-media-gfx/blender:player - Build the Blender Player. THis requires the Game engine.
-media-gfx/blender:test - Build the provided unit tests.
-media-gfx/blender:valgrind - Add support for memory debugging using dev-util/valgrind
 media-gfx/freecad:addonmgr - Build the addon manager module for automatic handling of 3rd party addons
 media-gfx/freecad:arch - Build the architecture workbench for working with architectural elements
 media-gfx/freecad:assembly - Build the assembly module
-media-gfx/freecad:complete - Build the complete workbench which holds all commands and features from all the modules and workbenches which met certain quality criteria
 media-gfx/freecad:drawing - Build the drawing module and workbench to display 3D work on a 2D sheet
 media-gfx/freecad:fem - Build the FEM module and workbench which provides Finite Element Analysis (FEA) workflows
 media-gfx/freecad:idf - Build the IDF module to provide file exchange capabilities with IDF files
@@ -85,7 +33,6 @@ media-gfx/freecad:pcl - Use external sci-libs/pcl for point clouds support.
 media-gfx/freecad:plot - Build the internal plot workbench. NOTE: This conflicts with the external plot workbench, which you can add via the Addon Manager!
 media-gfx/freecad:points - Build the points module and workbench for working with point clouds
 media-gfx/freecad:raytracing - Build the raytracing module and workbench for raytracing and rendering
-media-gfx/freecad:reverseengineering - Build the reverse engineering module and workbench which provides specific tools to convert shapes/solids/meshes into parametric FreeCAD-compatible features
 media-gfx/freecad:robot - Build the robot module and workbench for studying robot movements
 media-gfx/freecad:ship - Build the ship module and workbench which works over ship entities, that must be created on top of provided geometry. NOTE: This conflicts with the external ship workbench, which you can add via the Addon Manager!
 media-gfx/freecad:show - Build the show module, a helper module for visibility automation
@@ -139,13 +86,6 @@ sci-libs/magma:maxwell - Compile for GPU NVIDIA Maxwell family (sm_5x)
 sci-libs/magma:pascal - Compile for GPU NVIDIA Pascal family (sm_6x)
 sci-libs/magma:sparse - Additionally build the sparse matrix library
 sci-libs/magma:volta - Compile for GPU NVIDIA Volta family (sm_7x)
-sci-libs/opencascade:freeimage - Enable support for image i/o via media-libs/freeimage
-sci-libs/opencascade:gl2ps - Use gl2ps PostScript printing library
-sci-libs/opencascade:gles2 - Build with GL ES 2.0 support
-sci-libs/opencascade:inspector - Build the OCCT inspector tool for low-level data inspection
-sci-libs/opencascade:optimize - Don't clear allocated memory. Use optimized memory manager unless tbb USE flag is set.
-sci-libs/opencascade:tbb - Enable multithreading with the Intel Threads Building Block dev-cpp/tbb
-sci-libs/opencascade:vtk - Enable support for the Virtualisation Toolkit sci-libs/vtk
 sci-libs/parmetis:double-precision - Floating-point operation done as double precision
 sci-libs/parmetis:int64 - Build the 64 bits integer library (needed for > 2^31 vertices)
 sci-libs/vtk:R - Enable support for dev-lang/R
