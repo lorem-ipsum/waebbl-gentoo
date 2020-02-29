@@ -43,6 +43,13 @@ media-gfx/freecad:tux - Build the Tux module
 media-gfx/luxcorerender:opencl - Build with OpenCL support
 media-gfx/openexr_viewers:cg - Add support for nvidia's cg shaders
 media-gfx/openvdb:abi4-compat - Build openvdb with compatibility for older ABIs
+media-gfx/openvdb:numpy - Build pyopenvdb with support for dev-python/numpy
+media-gfx/openvdb:openvdb_abi_3 - Disables newer features to maintain compatibility with ABI version 3. Default for version 3.
+media-gfx/openvdb:openvdb_abi_4 - Disables newer features to maintain compatibility with ABI version 4. Default for version 4.
+media-gfx/openvdb:openvdb_abi_5 - Disables newer features to maintain compatibility with ABI version 5. Default for version 5.
+media-gfx/openvdb:openvdb_abi_6 - Disables newer features to maintain compatibility with ABI version 6. Default for version 6.
+media-gfx/openvdb:openvdb_abi_7 - Disables newer features to maintain compatibility with ABI version 7. Default for version 7.
+media-gfx/openvdb:utils - Build utility binaries
 media-libs/SoQt:coin-iv-extensions - Enables extra open inventor extensions
 media-libs/SoQt:man - Build and install man pages
 media-libs/SoQt:qthelp - Enable qthelp documentation
