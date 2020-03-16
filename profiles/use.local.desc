@@ -75,6 +75,9 @@ media-libs/opensubdiv:cuda - Enable NVIDIA CUDA Toolkit support through dev-util
 media-libs/opensubdiv:opencl - Enable OpenCL support through virtual/opencl.
 media-libs/opensubdiv:ptex - Adds support for faster per-face texture mapping through media-libs/ptex.
 media-libs/opensubdiv:tbb - Enable multithreading with the Intel Threads Building Blocks through dev-cpp/tbb.
+media-libs/quarter:designer - Build plugin for Qt Designer
+media-libs/quarter:qthelp - Build the Qt Help documentation
+media-libs/quarter:spacenav - Build support for app-misc/spacenavd
 media-sound/denemo:alsa - Enable alsa support through media-libs/alsa-lib
 media-sound/denemo:aubio - Enable media-libs/aubio support
 media-sound/denemo:doc - Use dev-util/gtk-doc to build documentation in html format
