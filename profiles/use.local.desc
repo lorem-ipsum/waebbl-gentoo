@@ -4,6 +4,8 @@
 
 dev-lang/ispc:sanitize - Build with address sanitizer instrumentation using clang
 dev-libs/qtnproperty:demo - Build and install the demo program.
+dev-python/pivy:quarter - Use media-libs/quarter for GUI bindings
+dev-python/pivy:soqt - Use media-libs/SoQt for GUI bindings
 dev-python/pyilmbase:numpy - Add bindings for dev-python/numpy use.
 games-util/simulationcraft:gui - Builds the Qt5 GUI
 media-gfx/alembic:arnold - Add support for arnold renderer (experimental)
