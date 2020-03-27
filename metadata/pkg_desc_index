@@ -14,7 +14,7 @@ dev-tcltk/itk 4.1.0: Object Oriented Enhancements for Tcl/Tk
 dev-util/codespell 1.15.0: Check text files for common misspellings
 dev-util/elkhound 9999: Elkhound is a GLR parser generator
 dev-util/smartgit 18.2.8: Git client with support for GitHub Pull Requests+Comments, SVN and Mercurial
-games-misc/wtf 20190630: Translates acronyms for you
+games-misc/wtf 20200326: Translates acronyms for you
 games-util/simulationcraft 801-r1 9999: SimulationCraft is a tool to explore combat mechanics in World of Warcraft.
 games-util/weidu 246.00 9999: Develop, distribute and install mods for Infinity Engine games.
 gnome-base/libgnomeui 2.24.5-r5: User Interface routines for Gnome
